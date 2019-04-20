@@ -107,8 +107,8 @@ public class ParkCommandsTest {
 
     @Test
     void shouldAbleToTakeAllFreeSlot() {
-        String[] firstArgs = new String[] { "2" };
-        String[] secondArgs = new String[] { "4" };
+        String[] firstArgs = new String[] { "CAR ONE", "CYAN" };
+        String[] secondArgs = new String[] { "CAR TWO", "GRAY" };
 
         CommandResult firstRes = commands.execute(mockLot, firstArgs);
         CommandResult secondRes = commands.execute(firstRes.getCurrent(), secondArgs);
