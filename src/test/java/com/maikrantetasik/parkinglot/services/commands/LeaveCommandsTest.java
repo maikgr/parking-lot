@@ -77,7 +77,6 @@ public class LeaveCommandsTest {
 
         CommandResult res = command.execute(mockLot, args);
         assertNotNull(res.getCurrent());
-        assertTrue(res.getMessage() == null || res.getMessage().equals(""));
         assertEquals(mockLot.getFilledSlots().size(), res.getCurrent().getFilledSlots().size());
         assertEquals(mockLot.getFreeSlots().size(), res.getCurrent().getFreeSlots().size());
     }
