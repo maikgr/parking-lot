@@ -3,6 +3,11 @@ package com.maikrantetasik.parkinglot.services.parsers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class InputFileParserTest {
@@ -14,8 +19,9 @@ public class InputFileParserTest {
     }
 
     @Test
-    void shouldParseValidFile() {
-        String validPath = "/input_test.txt";
+    void shouldParseValidFile() throws IOException {
+        File resource = new File("src/test/resources/input_test.txt");
+        String validPath = resource.getPath();
         String[] expect = new String[] {
                 "create_parking_lot 6",
                 "park KA-01-HH-1234 White",
@@ -42,8 +48,9 @@ public class InputFileParserTest {
     }
 
     @Test
-    void shouldParseEmptyFile() {
-        String validPath = "/empty_test.txt";
+    void shouldParseEmptyFile() throws IOException {
+        File resource = new File("src/test/resources/empty_test.txt");
+        String validPath = resource.getPath();
 
         String[] res = parser.parse(validPath);
 
@@ -52,8 +59,9 @@ public class InputFileParserTest {
     }
 
     @Test
-    void shouldParseBigFile() {
-        String bigFilePath = "/5000lines.txt";
+    void shouldParseBigFile() throws IOException {
+        File resource = new File("src/test/resources/5000lines.txt");
+        String bigFilePath = resource.getPath();
         int expectLength = 5000;
 
         assertDoesNotThrow(() -> parser.parse(bigFilePath));
@@ -67,6 +75,6 @@ public class InputFileParserTest {
     void shouldThrowErrorOnInvalidPath() {
         String invalidPath = "test/invalid";
 
-        assertThrows(IllegalArgumentException.class, () -> parser.parse(invalidPath));
+        assertThrows(IOException.class, () -> parser.parse(invalidPath));
     }
 }
