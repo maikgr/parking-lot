@@ -6,8 +6,8 @@ public class ParkingLotCommandController implements CommandController {
 
     }
 
-    public void Execute(String[] args) {
-
+    public String execute(String[] args) {
+        return null;
     }
 }
 
