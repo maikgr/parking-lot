@@ -18,7 +18,7 @@ public class StatusCommandsTest {private ParkingLotCommands commands;
 
     @BeforeEach
     void setUp() {
-        commands = new ParkCommands();
+        commands = new StatusCommands();
 
         Map<Integer, Car> filledSlots = new HashMap<>();
         filledSlots.put(1, new Car("white", "5N1AA0N"));
