@@ -19,7 +19,7 @@ public class SlotSearchByColorCommandsTest {
 
     @BeforeEach
     void setUp() {
-        commands = new ParkCommands();
+        commands = new SlotSearchByColorCommands();
 
         Map<Integer, Car> filledSlots = new HashMap<>();
         filledSlots.put(1, new Car("white", "5N1AA0N"));
