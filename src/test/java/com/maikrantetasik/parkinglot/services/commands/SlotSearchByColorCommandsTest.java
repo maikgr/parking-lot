@@ -13,7 +13,7 @@ import java.util.Queue;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SlotSearchByColorCommands {
+public class SlotSearchByColorCommandsTest {
     private ParkingLotCommands commands;
     private ParkingLot mockLot;
 
