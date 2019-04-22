@@ -33,6 +33,6 @@ public class SlotSearchByRegNumberCommands implements ParkingLotCommands {
             return new CommandResult(parkingLot, String.join(", ", foundSlots));
         }
 
-        return new CommandResult(parkingLot, "Not Found");
+        return new CommandResult(parkingLot, "Not found");
     }
 }

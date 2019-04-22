@@ -32,6 +32,6 @@ public class RegSearchByColorCommands implements ParkingLotCommands {
             return new CommandResult(parkingLot, String.join(", ", foundRegs));
         }
 
-        return new CommandResult(parkingLot, "Not Found");
+        return new CommandResult(parkingLot, "Not found");
     }
 }
