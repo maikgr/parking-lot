@@ -36,7 +36,6 @@ public class Main {
         }
         else {
             while (true) {
-                System.out.println("Input:");
                 Scanner scanner = new Scanner(System.in);
                 String command = scanner.nextLine();
 
